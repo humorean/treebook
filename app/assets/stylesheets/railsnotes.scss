@@ -1,0 +1,21 @@
+// Place all the styles related to the railsnotes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.note{
+  border-bottom: solid 1px #CCC;
+  padding: 5px 0;
+  p{
+    margin: 4px 0;
+  }
+  .admin{
+    display: none;
+  }
+}
+
+.note.hover .admin{
+  display: inline;
+}
+
+.note.hover{
+  background: #FAFAFA;
+}

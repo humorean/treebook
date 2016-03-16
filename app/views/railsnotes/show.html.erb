@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @railsnote.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @railsnote.content %>
+</p>
+
+<p>
+  <strong>Js equilavent:</strong>
+  <%= @railsnote.JS_Equilavent %>
+</p>
+
+<%= link_to 'Edit', edit_railsnote_path(@railsnote) %> |
+<%= link_to 'Back', railsnotes_path %>

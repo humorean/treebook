@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">Ming Huang</a>
+        <ul class="nav">
+          <li>
+            <%= link_to "All Statuses", statuses_path %>
+          </li>
+          <li>
+            <%= link_to "Rails Notes", railsnotes_path %>
+          </li>
+        </ul>
 
-<%= yield %>
+      </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <h1>Ming Huang</h1>
+    <%= yield %> <!--this is similar to ng-include-->
+    <footer>Footer</footer>
+  </div>
 </body>
 </html>

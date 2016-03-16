@@ -1,0 +1,29 @@
+<%= form_for(@railsnote) do |f| %>
+  <% if @railsnote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@railsnote.errors.count, "error") %> prohibited this railsnote from being saved:</h2>
+
+      <ul>
+      <% @railsnote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :JS_Equilavent %><br>
+    <%= f.text_area :JS_Equilavent %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

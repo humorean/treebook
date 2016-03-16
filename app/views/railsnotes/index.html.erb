@@ -1,0 +1,16 @@
+<h1 class="page-header"> Rails Notes</h1>
+<%= link_to "Post New Rails Note", new_railsnote_path, class: "btn btn-success" %>
+<% @railsnotes.each do |note| %>
+<div class="note">
+  <strong><%= note.title %></strong>
+  <p><%= note.content %></p>
+  <p><%= note.JS_Equilavent %></p>
+  <div class="meta">
+    <%= link_to time_ago_in_words(note.created_at) + " ago", note %>
+    <span class="admin">
+      <%= link_to "Edit", edit_railsnote_path(note) %> |
+      <%= link_to "Delete", note, method: :delete, data: {confirm: "Are you sure you want to delete this note?"} %>
+    </span>
+  </div>
+</div>
+<% end %>
